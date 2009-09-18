@@ -81,6 +81,7 @@ class Recipe(object):
                     except:
                         try: os.remove(download_filename)
                         except: pass
+                        raise
         
         parts = []
         
