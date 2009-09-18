@@ -77,7 +77,10 @@ class Recipe(object):
                     self.logger.info('Using a cached copy from %s' % download_filename)
                 else:
                     # Download the file if we don't have a local copy
-                    urllib.urlretrieve(url, download_filename)
+                    try: urllib.urlretrieve(url, download_filename)
+                    except:
+                        try: os.remove(download_filename)
+                        except: pass
         
         parts = []
         
