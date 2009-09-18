@@ -10,8 +10,12 @@ from setuptools import setup, find_packages
 def read(*rnames):
     return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
 
+MAJOR = 0
+MINOR = 1
+PATCH = 0
+
 name = 'hc.recipe.download'
-version = '0.1.0'
+version = '%s.%s.%s' % (MAJOR, MINOR, PATCH)
 long_description = '\n'.join([
     read('docs', 'README.txt'),
     'Changelog',
@@ -51,7 +55,6 @@ setup(
     install_requires=[
         'setuptools',
         'zc.buildout',
-        'zc.recipe.egg',
         # -*- Extra requirements: -*-
     ],
     tests_require=tests_require,
