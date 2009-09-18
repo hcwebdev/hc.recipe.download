@@ -1,0 +1,10 @@
+[buildout]
+develop = 
+    src/hc.recipe.download
+parts = test
+
+[test]
+recipe = zc.recipe.testrunner
+eggs = hc.recipe.download [tests]
+defaults = ['-s', 'hc.recipe.download']
+
