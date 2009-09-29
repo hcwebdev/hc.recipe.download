@@ -96,7 +96,7 @@ class Recipe(object):
             shutil.copy(download_filename, destination)
             
             if not destination in parts:
-                parts.append(os.path.join(destination, self.filename))
+                parts.append(os.path.join(destination, filename))
         
         return parts
     
